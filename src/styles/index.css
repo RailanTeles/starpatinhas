@@ -1,0 +1,111 @@
+/* Fonte */
+@font-face {
+    font-family: "OpensSansExtrabold";
+    src: url(../fonts/static/OpenSans-ExtraBold.ttf);
+}
+
+/* Configurações gerais */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body, html{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 94%;
+    padding: 2% 3%;
+    height: 10%;
+    background-color: #1253AF;
+    color: white;
+    font-family: "OpensSansExtrabold";
+}
+
+#logos{
+    display: flex;
+    min-width: 55%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logos > img {
+    min-width: auto;
+    height: 50%;
+}
+
+#verticalLine{
+    background-color: white;
+    width: 0.3%;
+    height: 60%;
+}
+
+#pages{
+    display: flex;
+    min-width: 40%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#pages > a{
+    font-size: 20px;
+    text-decoration-line: none;
+    color:white;
+}
+
+
+/* Telas médias */
+@media screen and (max-width: 900px) {
+    nav{
+        flex-wrap: wrap;
+        height: 30%;
+    }
+
+    #logos{
+        min-width: 100%;
+        height: 50%;
+    }
+
+    #logos > img {
+        height: 30%;
+    }
+
+    #pages{
+        width: 100%;
+        height: 50%;
+    }
+
+}
+
+
+/* Telas pequenas */
+@media screen and (max-width: 630px) { 
+    #logos{
+        flex-wrap: wrap;
+    }
+
+    #logos > img {
+        padding: 3%;
+    }
+
+    #verticalLine{
+        height: 0%;
+    }
+
+    #pages{
+        flex-wrap: wrap;
+        gap: 20%;
+    }
+
+}
