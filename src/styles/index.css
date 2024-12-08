@@ -16,6 +16,7 @@ body, html{
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 /* Navbar */
@@ -64,6 +65,43 @@ nav{
     color:white;
 }
 
+/* Conteúdo da página */
+article{
+    width: 100%;
+    min-height: 100%;
+    margin-top: 10%;
+}
+
+/* Partes das imagens */
+#visual{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imgvisual{
+    object-fit: contain;
+    flex-grow: 0; 
+}
+
+#imgcircle1{
+    width: 10%;
+    align-self: flex-start;
+}
+
+#imgstarmain{
+    width: 30%;
+}
+
+#imgstargroup{
+    width: 30%;
+    align-self: flex-start;
+    margin-right: 3%;
+}
+
 
 /* Telas médias */
 @media screen and (max-width: 900px) {
@@ -86,6 +124,32 @@ nav{
         height: 50%;
     }
 
+    /* Partes das imagens */
+    #visual{
+        justify-content: center;
+        position: relative;
+    }
+    
+    .imgvisual{
+        object-fit: contain;
+        flex-grow: 0; 
+    }
+    
+    #imgcircle1{
+        width: 15%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+      
+    #imgstarmain{
+        width: 70%;
+        margin: 5% 0%;
+    }
+    
+    #imgstargroup{
+        width: 40%;   
+    }
 }
 
 
