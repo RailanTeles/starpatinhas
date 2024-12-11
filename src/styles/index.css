@@ -196,6 +196,7 @@ article{
 
 #animals2{
     width: 80%;
+    min-width: 315px;
     object-fit: contain;
     flex-grow: 0; 
     margin: 40% 0% 0% 20%;
@@ -203,6 +204,7 @@ article{
 
 #rectangle2{
     width: 20%;
+    min-width: 90px;
     object-fit: contain;
     flex-grow: 0;
     position: absolute;
@@ -232,13 +234,13 @@ article{
 }
 
 #rectangle1{
-    width: 25%;
+    width: 20%;
     object-fit: contain;
     flex-grow: 0;
     position: absolute;
     bottom: 0;
     right: 0; 
-    margin-bottom: -10%;
+    margin-bottom: -6%;
 }
 
 #row2{
@@ -246,7 +248,7 @@ article{
     position: relative;
     justify-content: flex-end;
     width: 100%;
-    min-height: 700px;
+    min-height: 750px;
     height: auto;
 }
 
@@ -265,7 +267,7 @@ article{
     width: 80%;
     height: 100%;
     text-align: justify;
-    font-size: 20px;
+    font-size: 22px;
     color: white;
     font-family: "OpensSansSemibold";
     display: flex;
@@ -282,6 +284,9 @@ article{
 }
 
 #centerText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 70%;
     min-height: 60%;
 }
@@ -340,11 +345,22 @@ article{
     }
 
     /* Conteúdo */
-    #animals2{
-        width: 100%;
-        margin-top: 100%;
+
+    #dog{
+        width: 30%;
     }
 
+    #contentText{
+        font-size: 20px;
+    }
+
+    #animals2{
+        margin: 40% 0% 0% 50%;
+    }
+
+    #divText{
+        width: 70%;
+    }
 }
 
 
@@ -381,6 +397,10 @@ article{
 
     /* Conteúdo */
     #dog{
-        width: 0%;
+        display: none;
+    }
+
+    #divText{
+        width: 100%;
     }
 }
