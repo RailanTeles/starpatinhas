@@ -143,6 +143,8 @@ article{
     width: 100%;
     min-height: auto;
     margin-top: 10%;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Partes das imagens */
@@ -177,7 +179,7 @@ article{
     animation: fadeInSlide 0.5s ease-in-out;
 }
 
-/* Conteúdo */
+/* Sobre */
 #content{
     width: 100%;
     height: auto;
@@ -304,6 +306,42 @@ article{
     margin-left: 20%;
 }
 
+/* ONG's */
+#ong{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    min-height: 20%;
+    margin: auto;
+    margin-top: 10%;
+}
+
+iframe{
+    width: 50%;
+    height: auto;
+}
+
+#OngContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    text-align: justify;
+    align-items: center;
+    justify-content: center;
+}
+
+#OngContent > h1{
+    color: #1253AF;
+    font-family: "OpensSansExtrabold";
+    font-size: 80px;
+}
+
+#OngContent > p{
+    font-family: "OpensSansSemibold";
+    font-size: 22px;
+}
+
 /* Telas médias */
 @media screen and (max-width: 900px) {
     /* Navbar */
@@ -344,7 +382,7 @@ article{
         width: 0%;   
     }
 
-    /* Conteúdo */
+    /* Sobre */
 
     #dog{
         width: 30%;
@@ -361,8 +399,13 @@ article{
     #divText{
         width: 70%;
     }
-}
 
+    /* ONG's */
+    #ong{
+    width: 90%;
+    }
+
+}
 
 /* Telas pequenas */
 @media screen and (max-width: 630px) { 
@@ -395,12 +438,36 @@ article{
         width: 30%;
     }
 
-    /* Conteúdo */
+    /* Sobre */
     #dog{
         display: none;
     }
 
     #divText{
         width: 100%;
+    }
+
+    /* ONGs */
+    #ong{
+        display: flex;
+        flex-direction: column;
+    }
+
+    iframe{
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+    }
+
+    #OngContent{
+        width: 100%;
+        height: auto;
+        font-size: 20px;
+    }
+
+    #OngContent > h1{
+        color: #1253AF;
+        font-family: "OpensSansExtrabold";
+        font-size: 60px;
     }
 }
