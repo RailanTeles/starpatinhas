@@ -4,6 +4,11 @@
     src: url(../fonts/static/OpenSans-ExtraBold.ttf);
 }
 
+@font-face {
+    font-family: "OpensSansSemibold";
+    src: url(../fonts/static/OpenSans-SemiBold.ttf.ttf);
+}
+
 /* Animação */
 
 @keyframes fadeInSlide {
@@ -136,7 +141,7 @@ a{
 /* Conteúdo da página */
 article{
     width: 100%;
-    min-height: 100%;
+    min-height: auto;
     margin-top: 10%;
 }
 
@@ -172,6 +177,127 @@ article{
     animation: fadeInSlide 0.5s ease-in-out;
 }
 
+/* Conteúdo */
+#content{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+#dog{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20%;
+    position: relative;
+    align-items: center;
+    animation: fadeInSlide 0.5s ease-in-out;
+}
+
+#animals2{
+    width: 80%;
+    object-fit: contain;
+    flex-grow: 0; 
+    margin: 40% 0% 0% 20%;
+}
+
+#rectangle2{
+    width: 20%;
+    object-fit: contain;
+    flex-grow: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+}
+
+#divText{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    animation: fadeInSlide 0.5s ease-in-out;
+}
+
+#row1{
+    display: flex;
+    position: relative;
+    margin-bottom: -10%;
+    z-index: 1;
+}
+
+#animals1{
+    width: 40%;
+    object-fit: contain;
+    flex-grow: 0; 
+    margin-left: 20%;
+}
+
+#rectangle1{
+    width: 25%;
+    object-fit: contain;
+    flex-grow: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0; 
+    margin-bottom: -10%;
+}
+
+#row2{
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    width: 100%;
+    min-height: 700px;
+    height: auto;
+}
+
+#circle2{
+    width: 30%;
+    object-fit: contain;
+    flex-grow: 0;
+    position: absolute;
+    bottom: 60px;
+    left: 0; 
+    z-index: -1;
+}
+
+#contentText{
+    background-color: #1253AF;
+    width: 80%;
+    height: 100%;
+    text-align: justify;
+    font-size: 20px;
+    color: white;
+    font-family: "OpensSansSemibold";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contentText:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+#centerText{
+    width: 70%;
+    height: 40%;
+}
+
+#row3{
+    width: 100%;
+    margin-top: -15%;
+    z-index: 1;
+}
+
+#animals3{
+    width: 40%;
+    object-fit: contain;
+    flex-grow: 0;
+    margin-left: 20%;
+}
 
 /* Telas médias */
 @media screen and (max-width: 900px) {
@@ -213,6 +339,12 @@ article{
         width: 0%;   
     }
 
+    /* Conteúdo */
+    #animals2{
+        width: 100%;
+        margin-top: 100%;
+    }
+
 }
 
 
@@ -243,8 +375,12 @@ article{
         width: 40%;
         height: 100%;
     }
-
     #menu{
         width: 30%;
+    }
+
+    /* Conteúdo */
+    #dog{
+        width: 0%;
     }
 }
