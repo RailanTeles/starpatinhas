@@ -283,7 +283,7 @@ article{
 
 #centerText{
     width: 70%;
-    height: 40%;
+    min-height: 60%;
 }
 
 #row3{
