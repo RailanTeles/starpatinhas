@@ -311,7 +311,7 @@ article{
     display: flex;
     justify-content: space-between;
     width: 70%;
-    min-height: 20%;
+    min-height: 420px;
     margin: auto;
     margin-top: 10%;
 }
@@ -319,6 +319,11 @@ article{
 iframe{
     width: 50%;
     height: auto;
+}
+
+iframe:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
 #OngContent{
@@ -340,6 +345,79 @@ iframe{
 #OngContent > p{
     font-family: "OpensSansSemibold";
     font-size: 22px;
+}
+
+/* Contatos */
+#contacts{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 20%;
+    margin-top: 8%;
+    position: relative;
+}
+
+#divcontacts{
+    width: 40%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    min-width: 430px;
+}
+
+#divcontacts > h1{
+    font-family: "OpensSansExtrabold";
+    color: #FF1C01;
+    font-size: 35px;
+}
+
+#divcontacts > h2{
+    font-family: "OpensSansSemibold";
+    color: #FF1C01;
+}
+
+.ContactLinks{
+    background-color: #1253AF;
+    margin-top: 2%;
+    width: 80%;
+    min-width: 430px;
+    height: 20%;
+    min-height: 52px;
+    border-radius: 10px;
+    overflow-x: hidden;
+}
+
+.ContactLinks:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+.itens{
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 10%;
+}
+
+#ContactAnimals{
+    width: 40%;
+    min-width: 300px;
+    object-fit: contain;
+}
+
+#ContactCircles{
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    width: 10%;
+    min-width: 90px;
+    object-fit: contain;
+    flex-grow: 0;
+    z-index: -1;
 }
 
 /* Telas médias */
@@ -402,7 +480,7 @@ iframe{
 
     /* ONG's */
     #ong{
-    width: 90%;
+        width: 90%;
     }
 
 }
@@ -446,11 +524,16 @@ iframe{
     #divText{
         width: 100%;
     }
+    
+    #row2{
+        min-height: 800px;
+    }
 
     /* ONGs */
     #ong{
         display: flex;
         flex-direction: column;
+        min-height: 560px;
     }
 
     iframe{
@@ -469,5 +552,29 @@ iframe{
         color: #1253AF;
         font-family: "OpensSansExtrabold";
         font-size: 60px;
+    }
+
+    /* Contacts */
+    #divcontacts {
+        min-width: 0; 
+        width: 90%;
+    }
+
+    .ContactLinks {
+        min-width: 0; 
+        width: 100%;
+    }
+
+}
+
+
+/* Ajustes finais */
+@media screen and (max-width: 400px) { 
+    #row2{
+        min-height: 900px;
+    }
+
+    #ong{
+        min-height: 25%;
     }
 }
