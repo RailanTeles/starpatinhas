@@ -6,9 +6,13 @@
 
 @font-face {
     font-family: "OpensSansSemibold";
-    src: url(../fonts/static/OpenSans-SemiBold.ttf.ttf);
+    src: url(../fonts/static/OpenSans-SemiBold.ttf);
 }
 
+@font-face {
+    font-family: "OpensSansBold";
+    src: url(../fonts/static/OpenSans-Bold.ttf);
+}
 /* Animação */
 
 @keyframes fadeInSlide {
@@ -136,25 +140,18 @@ a{
 
 .NavBarItem{
     font-size: 150%;
-}
-
-/* Conteúdo da página */
-article{
-    width: 100%;
-    height: auto;
-    margin-top: 10%;
-    display: block;
-    padding-bottom: 300px;
+    font-family: "OpensSansSemibold";
 }
 
 /* Partes das imagens */
 #visual{
     width: 100%;
-    height: auto;
+    max-height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    margin-top: 5%;
 }
 
 .imgvisual{
@@ -184,10 +181,11 @@ article{
     width: 100%;
     height: auto;
     display: flex;
+    margin-top: 5%;
 }
 
 #dog{
-    width: 40%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     gap: 20%;
@@ -201,7 +199,7 @@ article{
     min-width: 315px;
     object-fit: contain;
     flex-grow: 0; 
-    margin: 40% 0% 0% 20%;
+    margin: 30% 0% 0% 40%;
 }
 
 #rectangle2{
@@ -215,49 +213,50 @@ article{
 }
 
 #divText{
-    width: 60%;
+    width: 70%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     animation: fadeInSlide 0.5s ease-in-out;
 }
 
-#row1{
-    display: flex;
+#row1 {
+    width: 100%;
+    height: auto; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
     position: relative;
     margin-bottom: -10%;
+}
+
+#animals1 {
+    max-width: 35%;
+    height: auto; 
+    object-fit: contain;
+    padding-left: 35%;
     z-index: 1;
 }
 
-#animals1{
-    width: 40%;
+#rectangle1{
     object-fit: contain;
     flex-grow: 0; 
-    margin-left: 20%;
-}
-
-#rectangle1{
-    width: 20%;
-    object-fit: contain;
-    flex-grow: 0;
-    position: absolute;
-    bottom: 0;
-    right: 0; 
-    margin-bottom: -6%;
+    width: 15%;
+    margin-bottom: -11%;
+    z-index: 1;
 }
 
 #row2{
+    width: 100%;
+    height: auto;
+    min-height: 650px;
     display: flex;
     position: relative;
-    justify-content: flex-end;
-    width: 100%;
-    min-height: 750px;
-    height: auto;
+    justify-content: end;
 }
 
 #circle2{
     width: 30%;
-    object-fit: contain;
-    flex-grow: 0;
     position: absolute;
     bottom: 60px;
     left: 0; 
@@ -265,97 +264,81 @@ article{
 }
 
 #contentText{
-    background-color: #1253AF;
-    width: 80%;
-    height: 100%;
-    text-align: justify;
-    font-size: 22px;
+    width: 75%;
+    height: auto;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    background-color: #1253AF; 
     color: white;
     font-family: "OpensSansSemibold";
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 20px;
+    text-align: justify;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#contentText:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
 #centerText{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     width: 70%;
-    min-height: 60%;
-}
-
-#row3{
-    width: 100%;
-    margin-top: -15%;
-    z-index: 1;
+    padding: 20% 0%;
 }
 
 #animals3{
-    width: 40%;
+    max-width: 35%;
+    height: auto; 
     object-fit: contain;
-    flex-grow: 0;
-    margin-left: 20%;
+    padding-left: 20%;
+    z-index: 1;
+    margin-top: -15%;
 }
 
 /* ONG's */
-.ong{
+#ONGS{
     display: flex;
-    margin-top: 10%;
+    flex-direction: column;
     width: 100%;
     height: auto;
-    min-height: 420px;
+    gap: 5%;
+    margin: 5% 0%;
     align-items: center;
     justify-content: center;
+    gap: 30px;
 }
 
 .DivOng{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 80%;
-    min-height: 420px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
 }
 
 iframe{
-    width: 50%;
-    height: 100%;
-    min-height: 400px;
-    min-width: 300px;
-}
-
-iframe:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+    width: 30%;
+    min-width: 280px;
+    height: auto;
+    min-height: 280px;
 }
 
 .OngContent{
+    width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 45%;
-    text-align: justify;
-    align-items: center;
-    justify-content: center;
 }
 
 .OngContent > h1{
     color: #1253AF;
     font-family: "OpensSansExtrabold";
-    font-size: 60px;
+    align-self: center;
+    font-size: 30px;
 }
 
 .OngContent > p{
     font-family: "OpensSansSemibold";
-    font-size: 22px;
+    text-align: justify;
+    font-size: 20px;
 }
 
 /* Contatos */
@@ -365,17 +348,18 @@ iframe:hover {
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
-    min-height: 20%;
+    height: auto;
     margin-top: 3%;
     position: relative;
 }
 
 #divcontacts{
-    width: 40%;
-    height: 60%;
+    height: auto;
+    width: 50%;
+    min-width: 400px;
     display: flex;
     flex-direction: column;
-    min-width: 430px;
+    gap: 10px;
 }
 
 #divcontacts > h1{
@@ -390,37 +374,26 @@ iframe:hover {
 }
 
 .ContactLinks{
-    background-color: #1253AF;
-    margin-top: 2%;
-    width: 90%;
+    width: 80%;
     min-width: 430px;
-    height: 20%;
-    min-height: 52px;
+    height: auto;
+    background-color: #1253AF;
     border-radius: 10px;
-    overflow-x: hidden;
 }
 
-.ContactLinks:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
-}
-
-
-#gmail{
-    height: 100%;
-}
 .itens{
-    max-width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
     display: flex;
     align-items: center;
     gap: 10px;
-    padding-left: 10%;
+    padding: 1% 0% 1% 30px;
+    font-family: "OpensSansSemibold";
 }
 
 #ContactAnimals{
-    width: 40%;
-    min-width: 300px;
+    width: 30%;
+    min-width: 330px;
     object-fit: contain;
 }
 
@@ -433,6 +406,12 @@ iframe:hover {
     object-fit: contain;
     flex-grow: 0;
     z-index: -1;
+
+}
+
+.ContactLinks:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
 /* Footer */
@@ -442,6 +421,7 @@ footer{
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
+    margin-top: 4%;
 }
 
 footer > img{
@@ -491,32 +471,38 @@ footer > img{
         width: 0%;   
     }
 
-    /* Sobre */
-
-    #dog{
-        width: 30%;
-    }
-
-    #contentText{
-        font-size: 20px;
-    }
-
-    #animals2{
-        margin: 40% 0% 0% 50%;
-    }
-
-    #divText{
-        width: 70%;
-    }
-
+    /* Sobre */ 
+    
     /* ONG's */
-    .ong{
+    .DivOng{
         width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    iframe{
+        width: 80%;
+    }
+    
+    .OngContent{
+        width: 80%;
     }
 
-    .DivOng{
+    /* Cotantos */
+    #contacts{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    #divcontacts{
         width: 90%;
     }
+
+    .ContactLinks{
+        width: 100%;
+        min-width: 0px;
+    }
+    
 }
 
 /* Telas pequenas */
@@ -559,45 +545,40 @@ footer > img{
         width: 100%;
     }
     
-    #row2{
-        min-height: 800px;
+    #animals1{
+        width: 40%;
+        max-width: none;
+        
+    }
+    #contentText{
+        width: 85%;
+        text-align: left;
     }
 
     /* ONGs */
-    
-    .DivOng{
+
+    .OngContent > p{
+        text-align: left;
+    }
+
+    /* Contatos */
+    #contacts{
         display: flex;
-        flex-direction: column;
-        min-height: 500px;
-    }
-    
-    iframe{
-        width: 100%;
-        height: auto;
-        min-height: 300px;
+        justify-content: center;
     }
 
-    .OngContent{
-        width: 100%;
-        height: auto;
-        font-size: 20px;
+    #divcontacts{
+        min-width: 0px;
     }
 
-    .OngContent > h1{
-        color: #1253AF;
-        font-family: "OpensSansExtrabold";
-        font-size: 60px;
+    .ContactLinks{
+        font-size: 14px;
     }
 
-    /* Contacts */
-    #divcontacts {
-        min-width: 0; 
+    #ContactAnimals{
         width: 90%;
-    }
-
-    .ContactLinks {
-        min-width: 0; 
-        width: 100%;
+        min-width: 0px;
+        object-fit: contain;
     }
 
     /* Footer */
@@ -606,18 +587,8 @@ footer > img{
     }
 }
 
-
-/* Ajustes finais */
-@media screen and (max-width: 400px) { 
-    #row2{
-        min-height: 1100px;
-    }
-
-    #ong{
-        min-height: 25%;
-    }
-
-    footer > img{
-        height: 20%;
+@media screen and (max-width: 630px) { 
+    .ContactLinks{
+        font-size: 12px;
     }
 }
