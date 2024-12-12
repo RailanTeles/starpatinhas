@@ -59,7 +59,7 @@ nav{
 }
 
 #logos > img {
-    min-width: auto;
+    width: auto;
     height: 50%;
 }
 
@@ -141,10 +141,10 @@ a{
 /* Conteúdo da página */
 article{
     width: 100%;
-    min-height: auto;
+    height: auto;
     margin-top: 10%;
-    display: flex;
-    flex-direction: column;
+    display: block;
+    padding-bottom: 300px;
 }
 
 /* Partes das imagens */
@@ -307,18 +307,29 @@ article{
 }
 
 /* ONG's */
-#ong{
+.ong{
+    display: flex;
+    margin-top: 10%;
+    width: 100%;
+    height: auto;
+    min-height: 420px;
+    align-items: center;
+    justify-content: center;
+}
+
+.DivOng{
     display: flex;
     justify-content: space-between;
-    width: 70%;
+    align-items: center;
+    width: 80%;
     min-height: 420px;
-    margin: auto;
-    margin-top: 10%;
 }
 
 iframe{
     width: 50%;
-    height: auto;
+    height: 100%;
+    min-height: 400px;
+    min-width: 300px;
 }
 
 iframe:hover {
@@ -326,7 +337,7 @@ iframe:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
-#OngContent{
+.OngContent{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -336,13 +347,13 @@ iframe:hover {
     justify-content: center;
 }
 
-#OngContent > h1{
+.OngContent > h1{
     color: #1253AF;
     font-family: "OpensSansExtrabold";
-    font-size: 80px;
+    font-size: 60px;
 }
 
-#OngContent > p{
+.OngContent > p{
     font-family: "OpensSansSemibold";
     font-size: 22px;
 }
@@ -355,7 +366,7 @@ iframe:hover {
     flex-wrap: wrap;
     width: 100%;
     min-height: 20%;
-    margin-top: 8%;
+    margin-top: 3%;
     position: relative;
 }
 
@@ -381,7 +392,7 @@ iframe:hover {
 .ContactLinks{
     background-color: #1253AF;
     margin-top: 2%;
-    width: 80%;
+    width: 90%;
     min-width: 430px;
     height: 20%;
     min-height: 52px;
@@ -394,6 +405,10 @@ iframe:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
+
+#gmail{
+    height: 100%;
+}
 .itens{
     max-width: 100%;
     height: 100%;
@@ -418,6 +433,22 @@ iframe:hover {
     object-fit: contain;
     flex-grow: 0;
     z-index: -1;
+}
+
+/* Footer */
+footer{
+    background-color: #1253AF;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+footer > img{
+    width: auto;
+    height: 50%;
+    object-fit: contain;
+    flex-grow: 0; 
 }
 
 /* Telas médias */
@@ -479,10 +510,13 @@ iframe:hover {
     }
 
     /* ONG's */
-    #ong{
-        width: 90%;
+    .ong{
+        width: 100%;
     }
 
+    .DivOng{
+        width: 90%;
+    }
 }
 
 /* Telas pequenas */
@@ -530,25 +564,26 @@ iframe:hover {
     }
 
     /* ONGs */
-    #ong{
+    
+    .DivOng{
         display: flex;
         flex-direction: column;
-        min-height: 560px;
+        min-height: 500px;
     }
-
+    
     iframe{
         width: 100%;
         height: auto;
         min-height: 300px;
     }
 
-    #OngContent{
+    .OngContent{
         width: 100%;
         height: auto;
         font-size: 20px;
     }
 
-    #OngContent > h1{
+    .OngContent > h1{
         color: #1253AF;
         font-family: "OpensSansExtrabold";
         font-size: 60px;
@@ -565,16 +600,24 @@ iframe:hover {
         width: 100%;
     }
 
+    /* Footer */
+    footer > img{
+        height: 30%;
+    }
 }
 
 
 /* Ajustes finais */
 @media screen and (max-width: 400px) { 
     #row2{
-        min-height: 900px;
+        min-height: 1100px;
     }
 
     #ong{
         min-height: 25%;
+    }
+
+    footer > img{
+        height: 20%;
     }
 }
