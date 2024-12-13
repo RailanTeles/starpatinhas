@@ -326,6 +326,7 @@ iframe{
     width: 50%;
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
 .OngContent > h1{
@@ -339,6 +340,25 @@ iframe{
     font-family: "OpensSansSemibold";
     text-align: justify;
     font-size: 20px;
+}
+
+.OngContatos{
+    display: flex;
+    width: 50%;
+    align-self: center;
+}
+
+.OngContatos > a{
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    width: fit-content; 
+    height: fit-content; 
+    text-decoration: none; 
+}
+
+.OngContatosImg{
+    width: 60%;
 }
 
 /* Contatos */
@@ -559,6 +579,10 @@ footer > img{
 
     .OngContent > p{
         text-align: left;
+    }
+
+    .OngContatos{
+        width: 80%;
     }
 
     /* Contatos */

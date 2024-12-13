@@ -30,3 +30,22 @@ function openNavBar(overlay, menu, navcontent){
     menu.classList.add("On");
     navcontent.style.display = "flex";
 }
+
+
+
+function copyToClipboard(text) {
+    // Cria um elemento de texto temporário
+    const tempInput = document.createElement("input");
+    tempInput.value = text;
+    document.body.appendChild(tempInput);
+
+    // Seleciona e copia o texto para a área de transferência
+    tempInput.select();
+    document.execCommand("copy");
+
+    // Remove o elemento temporário
+    document.body.removeChild(tempInput);
+
+    // Feedback para o usuário (opcional)
+    alert("Número copiado para a área de transferência!");
+}
