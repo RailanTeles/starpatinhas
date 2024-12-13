@@ -299,21 +299,20 @@ a{
     width: 100%;
     height: auto;
     gap: 5%;
-    margin: 4% 0%;
+    margin: 5% 0%;
     align-items: center;
     justify-content: center;
     gap: 30px;
 }
 
 .DivOng{
-    width: 90%;
+    width: 80%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    margin-bottom: 8%;
+    gap: 40px;
 }
 
 iframe{
@@ -347,8 +346,6 @@ iframe{
     display: flex;
     width: 50%;
     align-self: center;
-    display: flex;
-    flex-direction: row;
 }
 
 .OngContatos > a{
@@ -361,17 +358,7 @@ iframe{
 }
 
 .OngContatosImg{
-    width: 35%;
-}
-
-.OngContatosTitulo {
-    width: 80%;
-    flex-direction: column;
-    text-align: center;
-    color: #1253AF;
-    font-family: "OpensSansExtrabold";
-    align-self: center;
-    font-size: 20px;
+    width: 60%;
 }
 
 /* Contatos */

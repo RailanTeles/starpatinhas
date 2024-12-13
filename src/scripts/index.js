@@ -14,10 +14,17 @@ buttonOff.addEventListener("click", ()=>{
 });
 
 itens.forEach((item) => {
-    item.addEventListener("click", () => {
+    item.addEventListener("click", (event) => {
+        event.preventDefault(); // Impede o comportamento padrão
+        const target = document.querySelector(item.getAttribute("href"));
         closeNavBar(overlay, menu, navcontent);
+
+        // Rolagem suave para o elemento
+        setTimeout(() => {
+            target.scrollIntoView({ behavior: "smooth" });
+        }, 100); // Tempo para o menu fechar
     });
-})
+});
 
 function closeNavBar(overlay, menu, navcontent){
     overlay.style.display = "none";
