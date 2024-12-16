@@ -15,14 +15,13 @@ buttonOff.addEventListener("click", ()=>{
 
 itens.forEach((item) => {
     item.addEventListener("click", (event) => {
-        event.preventDefault(); // Impede o comportamento padrão
+        event.preventDefault(); 
         const target = document.querySelector(item.getAttribute("href"));
         closeNavBar(overlay, menu, navcontent);
 
-        // Rolagem suave para o elemento
         setTimeout(() => {
             target.scrollIntoView({ behavior: "smooth" });
-        }, 100); // Tempo para o menu fechar
+        }, 100); 
     });
 });
 
